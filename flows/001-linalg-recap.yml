@@ -23,7 +23,8 @@ pages:
         language so before learning anything we have to setup the environment so we 
         can practice the programs. Plebe install python 3 as given below.
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/toj52fwsWH8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        {% from "content-macros.jinja" import youtube %}
+        {{ youtube("QH2-TGUlwu4") }}
 
 -
     type: Page
