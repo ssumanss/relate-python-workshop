@@ -28,7 +28,7 @@ pages:
 
 -
     type: Page
-    id: software-installation
+    id: software
     content: |
 
         # Installing Softwares
