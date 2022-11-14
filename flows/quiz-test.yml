@@ -136,7 +136,7 @@ groups:
 
 
         type: TextQuestion
-        id: print2
+        id: print_second
         value: 1
         prompt: |
 
