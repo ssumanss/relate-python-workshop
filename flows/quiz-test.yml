@@ -78,9 +78,8 @@ groups:
         answers:
 
           - type: int
-            value: 0.5
-          - <plain>half
-          - <plain>a half
+            value: 46
+
 
     -
         type: MultipleChoiceQuestion
