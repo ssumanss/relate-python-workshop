@@ -1,6 +1,6 @@
-title: "Linear Algebra"
+title: "Python Workshop"
 description: |
-    # Linear Algebra Recap
+    # 15 days of python course
 
 rules:
     access:
@@ -17,88 +17,40 @@ pages:
     id: intro
     content: |
 
-        # A little distraction to start
+        # Welcome
 
-        Yadda yadda.
+        A warm welcome to the Python Programming Workshop. Python is a programming 
+        language so before learning anything we have to setup the environment so we 
+        can practice the programs. Plebe install python 3 as given below.
 
         {% from "content-macros.jinja" import youtube %}
         {{ youtube("QH2-TGUlwu4") }}
 
 -
     type: Page
-    id: vectors
+    id: software-installation
     content: |
 
-        # Vectors
+        # Installing Softwares
 
-        A vector is pretty straight.
+        Programming languages are supposed to be learn on computers. 
+        Fortunately now we have apps that can be used to learn python on smartphone. 
+        Due to lockdown many faculty members don't have access to the computer. 
+        So this programme is designed such that it can be completed on the smartphone.
 
+        ## Android Smartphone 
 
--
-    type: Page
-    id: ipynb
-    content: |
+        Please install Pydroid 3 IDE(Integrated development environment) 
+        from the playstore using the following link
 
-      # Ipython notebook render examples
+        ![pydroid 3 for android](https://play.google.com/store/apps/details?id=ru.iiec.pydroid3)
 
-      The following examples were using [this ipynb file](repocur:ipynbs/Ipynb_example.ipynb) in `ipynbs` folder of this repo.
+        ## Laptop/Computer 
 
-      ## Fully rendered
-      
-      The following markdown was used to render the full notebook:
-      
-      ```
-      {{ '{{ render_notebook_cells("ipynbs/Ipynb_example.ipynb") }}' }}
-      ```
+        In order to install python on computer, we can use anaconda **python 3.x** 
+        from the bottom of the following page according to your operating system.
 
-      Result:
-
-      {{ render_notebook_cells("ipynbs/Ipynb_example.ipynb") }}
-
-      ## Sliced
-
-      We can choose which cells (by their 0-based indices) to be rendered with arg `indices`.
-
-      For example, cells 0 through 4 can be rendered with the following markdown:
-
-
-      ```
-      {{ '{{ render_notebook_cells("ipynbs/Ipynb_example.ipynb", indices=[0,1,2,3,4]) }}' }}
-      ```
-
-      Or using `jinja2` built-in function [`range`](http://jinja.pocoo.org/docs/2.9/templates/#range):
-
-      ```
-      {{ '{{ render_notebook_cells("ipynbs/Ipynb_example.ipynb", indices=range(0,4)) }}' }}
-      ```
-
-      Result:
-
-      {{ render_notebook_cells("ipynbs/Ipynb_example.ipynb", indices=range(0,4)) }}
-
-      ## With markdown cleared
-
-      Use `clear_markdown` to get the result with content of *all* markdown cells cleared:
-
-      ```
-      {{ '{{ render_notebook_cells("ipynbs/Ipynb_example.ipynb", clear_markdown=True) }}' }}
-      ```
-
-      Result:
-
-      {{ render_notebook_cells("ipynbs/Ipynb_example.ipynb", clear_markdown=True) }}
-
-      ## With code execution output cleared
-
-      Use `clear_output` to get the result with output of *all* code cells cleared:
-
-      Result:
-
-      ```
-      {{ '{{ render_notebook_cells("ipynbs/Ipynb_example.ipynb", clear_output=True) }}' }}
-      ```
-
-      {{ render_notebook_cells("ipynbs/Ipynb_example.ipynb", clear_output=True) }}
+        ![Download Anaconda](https://www.anaconda.com/products/individual)
 
 
 completion_text: |

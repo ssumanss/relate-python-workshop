@@ -66,24 +66,21 @@ groups:
     # them from other files, as below.
     -
         type: TextQuestion
-        id: half
-        value: 5
+        id: python-expression
+        value: 1
         prompt: |
 
-          # A half
+          # Expression in python
 
-          What's a half?
+          What is the value of this expression `2**2**3**1` in python?
+
 
         answers:
 
-          - type: float
+          - type: int
             value: 0.5
-            rtol: 1e-4
           - <plain>half
           - <plain>a half
-
-    -
-        {{ indented_include("questions/krylov.yml", 8) }}
 
     -
         type: MultipleChoiceQuestion
@@ -106,51 +103,55 @@ groups:
           - ~CORRECT~ Almond bits
 
     -
-        {{ indented_include("questions/matrix-properties.yml", 8) }}
-
-    -
-        {{ indented_include("questions/multi-question-example.yml", 8) }}
-
-    -
-        type: SurveyTextQuestion
-        id: fear
-        widget: textarea
+        type: MultipleChoiceQuestion
+        id: print
+        value: 2
         prompt: |
 
-            # Psychology Survey
+            # Print
 
-            What's your biggest fear?
+            print is used for
 
-    -
-        {{ indented_include("questions/survey-age-question.yml", 8) }}
+        choices:
 
--
-    id: quiz_tail
-    shuffle: True
-    pages:
+            - ~CORRECT~ getting output from the program
+            - running the program
+            - ~CORRECT~ debugging the program
+            - ending the program
 
-    -
-        {{ indented_include("questions/complex-text-match-example.yml", 8) }}
-    -
-        {{ indented_include("questions/symbolic-expression-example.yml", 8) }}
-    -
-        {{ indented_include("questions/long-choice-least-squares.yml", 8) }}
-    -
-        {{ indented_include("questions/autograded-python-example.yml", 8) }}
-    -
-        {{ indented_include("questions/auto-and-human-graded-python-example.yml", 8) }}
-    -
-        {{ indented_include("questions/pdf-file-upload-example.yml", 8) }}
-    -
-        {{ indented_include("questions/any-file-upload-example.yml", 8) }}
-    -
-        {{ indented_include("questions/human-graded-text-example.yml", 8) }}
-    -
-        {{ indented_include("questions/audio-output-example.yml", 8) }}
-    -
-        {{ indented_include("questions/python-complex-validation-test-code.yml", 8) }}
-    -
-        {{ indented_include("questions/non-ascii-choices.yml", 8) }}
+
+        type: ChoiceQuestion
+        id: output
+        value: 1
+        prompt: |
+
+            # Output
+
+            Which of the following has a different output
+
+        choices:
+
+            - print("Hello World")
+            - print("Hello", "World")
+            - print("Hello\sWorld")
+            - ~CORRECT~ All will produce the same output
+
+
+        type: TextQuestion
+        id: print-string
+        value: 1
+        prompt: |
+
+            # Print 
+
+            What will be the output of the following code? 
+            ```python
+            >>> print ("3+4")
+            ```
+
+        answers:
+          - <plain>3+4
+
 
 completion_text: |
 
