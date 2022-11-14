@@ -135,21 +135,6 @@ groups:
             - ~CORRECT~ All will produce the same output
 
 
-        type: TextQuestion
-        id: print_second
-        value: 1
-        prompt: |
-
-            # Print 
-
-            What will be the output of the following code? 
-
-            print ("3+4")
-
-        answers:
-            - <plain>3+4
-
-
 completion_text: |
 
     # See you in class!
