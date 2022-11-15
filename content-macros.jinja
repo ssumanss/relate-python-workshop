@@ -4,8 +4,9 @@
 {# may do undesired things with such deeply indented content. #}
 
 {% macro youtube(id) -%}
+{% raw %}
   <iframe width="560" height="315" src="https://www.youtube.com/embed/QhUP9d9qAXE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+{% endraw %}
   <div class="well" markdown="1">
     (This embedded video was brought to you by the `youtube` macro.
     See [this macro definition file](https://github.com/inducer/relate-sample/blob/master/macros.jinja)
