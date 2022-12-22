@@ -24,6 +24,8 @@ pages:
         can practice the programs. Plebe install python 3 as given below.
 
         {% from "content-macros.jinja" import youtube %}
+        {{ youtube("QH2-TGUlwu4") } | safe }
+        
         {{ youtube("QH2-TGUlwu4") }}
 
 -
