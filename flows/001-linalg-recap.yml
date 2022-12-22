@@ -30,10 +30,10 @@ pages:
 
         {{ youtube("QH2-TGUlwu4") }}
 
-        {% autoescape off %}
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/Pi-5_eid7VA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Pi-5_eid7VA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <embed width="560" height="315" src="https://www.youtube.com/embed/Pi-5_eid7VA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></embed> 
-        {% endautoescape %}
+        
 -
     type: Page
     id: software
