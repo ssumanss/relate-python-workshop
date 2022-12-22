@@ -24,9 +24,11 @@ pages:
         can practice the programs. Plebe install python 3 as given below.
 
         {% from "content-macros.jinja" import youtube %}
-        {{ youtube("QH2-TGUlwu4") | safe }}
+        {{ youtube("QH2-TGUlwu4") | e }}
         
         {{ youtube("QH2-TGUlwu4") }}
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Pi-5_eid7VA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 -
     type: Page
