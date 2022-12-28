@@ -1,0 +1,142 @@
+# This is a YAML comment, which is entirely ignored.
+
+# YAML files in Relate are preprocessed with Jinja2.
+# See http://jinja.pocoo.org/docs/latest/templates/ for syntax.
+
+# This brings in a helper function that is used to include pages from
+# separate files. This is optional, but conceivably useful.
+{% from "yaml-macros.yml" import indented_include %}
+
+title: "RELATE Test Quiz"
+
+# The "|" character introduces a 'block literal', which means all text indented below
+# it is taken literally. The description property holds text marked up with 'Markdown'.
+# See https://documen.tician.de/relate/content.html#relate-markup for more.
+#
+# So the '#' character below introduces a first-level headline (not a comment).
+description: |
+
+    # RELATE Test Quiz
+
+rules:
+    start:
+    -
+        if_before: end_week 1
+        if_has_role: [student, ta, instructor]
+        if_has_fewer_sessions_than: 4
+        may_start_new_session: True
+        may_list_existing_sessions: True
+
+    -
+        may_start_new_session: False
+        may_list_existing_sessions: True
+
+    access:
+    -
+        message: "Welcome! This message is brought to you by the access rules."
+        permissions: [view, submit_answer, end_session, see_correctness, see_answer_after_submission]
+
+    grade_identifier: la_quiz
+    grade_aggregation_strategy: use_latest
+
+    grading:
+    -
+        credit_percent: 100
+
+groups:
+-
+    id: intro
+    pages:
+
+    -
+        type: Page
+        id: welcome
+        content: |
+
+            # Welcome to the test quiz for RELATE!
+
+            Don't be scared.
+
+-
+    id: quiz_start
+    shuffle: False
+    pages:
+
+    # Pages can be given in-line (like this one) or brought in by including
+    # them from other files, as below.
+    -
+        type: TextQuestion
+        id: python_expression
+        value: 1
+        prompt: |
+
+          # Expression in python
+
+          What is the value of this expression `2**2**3**1` in python?
+
+
+        answers:
+
+          - <plain>345
+
+
+    -
+        type: MultipleChoiceQuestion
+        id: ice_cream_toppings
+        credit_mode: exact
+        value: 1
+        shuffle: False
+        prompt: |
+
+            # Ice Cream Toppings
+
+            Which of the following are ice cream toppings?
+
+        choices:
+
+          - ~CORRECT~ Sprinkles
+          - ~CORRECT~ Chocolate chunks
+          - Vacuum cleaner dust
+          - Spider webs
+          - ~CORRECT~ Almond bits
+
+    -
+        type: MultipleChoiceQuestion
+        id: print
+        value: 2
+        prompt: |
+
+            # Print
+
+            print is used for
+
+        choices:
+
+            - ~CORRECT~ getting output from the program
+            - running the program
+            - ~CORRECT~ debugging the program
+            - ending the program
+
+
+        type: ChoiceQuestion
+        id: output
+        value: 1
+        prompt: |
+
+            # Output
+
+            Which of the following has a different output
+
+        choices:
+
+            - print("Hello World")
+            - print("Hello", "World")
+            - print("Hello\sWorld")
+            - ~CORRECT~ All will produce the same output
+
+
+completion_text: |
+
+    # See you in class!
+
+    Thanks for completing the quiz.

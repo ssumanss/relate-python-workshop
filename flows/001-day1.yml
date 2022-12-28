@@ -1,0 +1,149 @@
+title: "15 Days Python"
+description: |
+    # 15 Days Python
+
+rules:
+    access:
+    -
+        if_has_role: [student, ta, instructor]
+        permissions: [view]
+
+    grade_identifier: null
+
+pages:
+
+-
+    type: Page
+    id: intro
+    content: |
+
+        {% from "content-macros.jinja" import youtube %}
+        {{ youtube("QhUP9d9qAXE") }}
+
+        # Day 1: Variables and Mathematical Operations
+
+        The agenda of the first day is to do some trivial things, like printing something and doing school arithmetic. 
+
+-
+    type: Page
+    id: print-function
+    content: |
+
+        # Print Function
+
+        A program can be perfect but produce no output unless it is not told to do so. To get the output from the program we have to use `print` function. 
+        Like mathematics **functions** in python are objects which takes some input and produce some output. Many functions are inbuilt in python. Later we will learn to define our own functions. 
+
+        Now let's try the first program in any language is usually printing **Hello World!**. In python it is very simple and intuitive. 
+
+        ``` python
+        print("Hello World!")
+        ```
+
+        ```
+        Hello World!
+        ```
+
+-
+    type: Page
+    id: variable
+    content: |
+
+        # Defining variable
+
+        In every programming language, we can assign something a value. To define a variable just choose a variable name and assign it to a value using `=` as follows
+
+        ``` python
+        x = 24 # an integer
+        pi = 3.14 # a float
+        msg = "Hello World!" # a string
+        ```
+
+        Now we can recall these value by it's variable. Like here `msg` is assigned to `Hello World!`. We can print this by simply
+
+        ``` python 
+        print(x)
+        print(pi)
+        print(msg)
+        ```
+
+        ```
+        24
+        3.14
+        Hello World!
+        ```
+
+        **Ex:** Choose three variables and assign one as an integer, one as a float and one as a string, and print them.
+
+        !!! warning "A variable can be assigned multiple times in a program. Only the last value will be printed."
+
+        ``` python 
+        name = "Ram Kumar"   # name is Ram Kumar
+        name = "Shyam Kumar" # name is Shyam Kumar
+        print(name)
+        ```
+
+        ```
+        Shyam Kumar
+        ```
+
+        !!! tip "Using Comment Inside Code"
+            The line after `#` got ignored by the python. It is called a comment in any programming language. You can use comment to add some instructions to the code. 
+
+
+-
+    type: Page
+    id: mathematical-operations
+    content: |
+
+        # Mathematical Operations
+
+        Mathematical operations, i.e., addition, subtraction etc. can be done as 
+
+        ``` python
+        5 + 6 # addition
+        5 - 6 # subtraction
+        5 * 6 # multiplication
+        5 / 6 # division
+        5 ** 6 # exponent or power
+        ```
+
+        **Ex:** Choose two variable `x` and `y` and assign each one as an integer. Try each of the above operations on them like `x+y`. Finally print them
+
+        ``` python
+        x = 2 
+        y = 3
+        z = x + y
+        print(z)
+        ```
+
+        ```
+        5
+        ```
+
+        ### Mathematical Expression
+
+        We can use these operations to evaluate complicated mathematical expressions in python, for example, we can compute 
+        $$ f(x) = \frac{x^2 + 1}{y-1} $$
+        as follows
+
+        ``` python 
+        x = 5 
+        y = 3
+        z = (x**2 + 1) / (y-1)
+        print(z)
+        ```
+
+        ```
+        13
+        ```
+
+        ## References
+
+        3. [:material-video-outline: Basic Math, Mathematical Operators and Python Expressions](https://www.youtube.com/watch?v=Os4gZUI1ZlM)
+
+completion_text: |
+
+    # End of Linear Algebra Recap
+
+    Now you're ready to take the [quiz](flow:quiz-test1).
