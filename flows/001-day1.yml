@@ -140,10 +140,10 @@ pages:
 
         ## References
 
-        3. [:material-video-outline: Basic Math, Mathematical Operators and Python Expressions](https://www.youtube.com/watch?v=Os4gZUI1ZlM)
+        3. [Basic Math, Mathematical Operators and Python Expressions](https://www.youtube.com/watch?v=Os4gZUI1ZlM)
 
 completion_text: |
 
     # End of Linear Algebra Recap
 
-    Now you're ready to take the [quiz](flow:quiz-test1).
+    Now you're ready to take the [quiz](flow:quiz-test).
