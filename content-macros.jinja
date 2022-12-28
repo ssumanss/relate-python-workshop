@@ -5,17 +5,8 @@
 
 {% macro youtube(id) -%}
 <div class="ratio ratio-16x9">
-  <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/{{ id }}?rel=0" title="YouTube video" allowfullscreen></iframe>
 </div>
-
-
-  <div class="well" markdown="1">
-    (This embedded video was brought to you by the `youtube` macro.
-    See [this macro definition file](https://github.com/inducer/relate-sample/blob/master/macros.jinja)
-    in the sample content repository for an example of how to do define macros.)
-  </div>
-
-  <embed width="560" height="315" src="https://www.youtube.com/embed/Pi-5_eid7VA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></embed>
 {%- endmacro %}
 
 
